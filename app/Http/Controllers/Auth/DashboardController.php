@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\PostLiked;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class DashboardController extends Controller
 {
@@ -12,8 +14,10 @@ class DashboardController extends Controller
     {
         $this->middleware(['auth']);
     }
+
     public function index()
     {
+        $user = auth()->user();
         return view('dashboard');
     }
 }
