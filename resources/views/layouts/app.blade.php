@@ -12,7 +12,7 @@
 <body class="bg-gray-200">
   <nav class="p-6 bg-white flex justify-between mb-6">
     <ul class="flex">
-      <li><a href="/" class="p-3">Home</a></li>
+      <li><a href="{{ route('home') }}" class="p-3">Home</a></li>
       <li><a href="{{route('dashboard')}} " class="p-3">Dasboard</a></li>
       <li><a href="{{route('posts')}} " class="p-3">Post</a></li>
     </ul>
